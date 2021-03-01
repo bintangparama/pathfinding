@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pathfinding </title>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #toolbar {
+            width: 85vmin;
+            height: 10vmin;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            outline: black 0.1vmin solid;
+        }
+
+        #grid {
+            width: 85vmin;
+            height: 85vmin;
+            display: grid;
+        }
+
+        #node {
+            width: 100%;
+            height: 100%;
+            outline: black 0.1vmin solid;
+        }
+
+        button {
+            width: 10vw;
+            height: 5vh;
+            background-color: white;
+            border: black 0.01vmin solid;
+        }
+
+        input {
+            width: 7vw;
+            height: 3vh;
+        }
+    </style>
+
+    <script defer src="/functions.js"></script>
+    <script defer src="/index.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <button onclick="paint.toggle();" id="tp">Erase wall</button>
+        <button onclick="Eval();">Run Algorithm</button>
+        <input type="number" name="SPEED" id="spd" placeholder="ms between calculationz">
+        <button onclick="ResetGrid()">Reset</button>
+    </div>
+</body>
+</html>
